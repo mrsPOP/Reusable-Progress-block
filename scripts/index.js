@@ -16,19 +16,10 @@ document.getElementById("value").addEventListener("input", (event) => {
   progressElement.setValue(event.target.value);
   event.target.value = progressElement.value;
 });
-
 document.getElementById("animate").addEventListener("click", (event) => {
-  if (!event.target.checked) {
-    progressElement.stopAnimation();
-  } else {
-    progressElement.animate();
-  }
+  progressElement.toggleAnimation();
 });
 
 document.getElementById("hide").addEventListener("click", (event) => {
-  if (!event.target.checked) {
-    progressElement.show();
-  } else {
-    progressElement.hide();
-  }
+  progressElement.toggleVisibility();
 });
