@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress block Sample</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script defer type="module" src="scripts/index.js"></script>
+  </head>
+  <body>
+    <header class="header">Progress</header>
+    <main class="main">
+      <div id="id"></div>
+      <form class="controller">
+        <label class="controller-item">
+          <input type="text" id="value" min="0" max="100" value="0" />
+          <label for="value">Value</label>
+        </label>
+        <div class="controller-item">
+          <label class="controller-switcher">
+            <input type="checkbox" class="controller-input" id="animate" />
+            <span class="controller-slider"></span>
+          </label>
+          <label for="animate">Animate</label>
+        </div>
+        <div class="controller-item">
+          <label class="controller-switcher">
+            <input type="checkbox" class="controller-input" id="hide" />
+            <span class="controller-slider"></span>
+          </label>
+          <label for="hide">Hide</label>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

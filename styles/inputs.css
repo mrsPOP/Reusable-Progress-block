@@ -1,0 +1,94 @@
+.controller {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.controller-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.controller-switcher {
+  position: relative;
+  inline-size: 86px;
+  block-size: 58px;
+}
+
+.controller-input {
+  opacity: 0;
+  inline-size: 0;
+  block-size: 0;
+}
+
+.controller-slider {
+  position: absolute;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  cursor: pointer;
+}
+
+.controller-slider:before {
+  position: absolute;
+  content: "";
+  block-size: 50px;
+  inline-size: 49px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.controller-input:checked + .controller-slider {
+  background-color: #005cff;
+}
+
+.controller-input:checked + .controller-slider:before {
+  transform: translateX(29px);
+}
+
+input[type="text"] {
+  font-family: "GT Eesti Pro Display", Helvetica, sans-serif;
+  font-size: 25px;
+  inline-size: 86px;
+  block-size: 58px;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 34px;
+  padding-top: 8px;
+  border: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+  .controller {
+    gap: 40px;
+  }
+
+  input[type="text"] {
+    font-size: 20px;
+    padding-top: 5px;
+    inline-size: 74px;
+    block-size: 45px;
+  }
+
+  .controller-slider:before {
+    inline-size: 39px;
+    block-size: 39px;
+    left: 4px;
+    bottom: 3px;
+  }
+
+  .controller-switcher {
+    position: relative;
+    inline-size: 74px;
+    block-size: 45px;
+  }
+
+  .controller-input:checked + .controller-slider:before {
+    transform: translateX(28px);
+  }
+}

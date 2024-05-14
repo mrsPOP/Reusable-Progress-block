@@ -1,0 +1,42 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@property --fraction {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 30vw;
+  min-inline-size: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(#005cff var(--fraction), #eaf0f6 0);
+  transition: --fraction 0.5s, opacity 0.5s;
+}
+
+.progress::after {
+  width: 85%;
+  content: "";
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+@media (min-width: 1280px) {
+  .progress {
+    inline-size: 400px;
+  }
+}

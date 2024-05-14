@@ -1,0 +1,51 @@
+body {
+  font-family: "GT Eesti Pro Display", Helvetica, sans-serif;
+  font-size: 25px;
+  max-inline-size: 1280px;
+  min-inline-size: 320px;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  font-size: 35px;
+  text-align: left;
+  inline-size: 100%;
+  max-inline-size: 1280px;
+  padding: 2vw;
+}
+
+.main {
+  max-inline-size: 1280px;
+  inline-size: 100%;
+  padding-inline: 13vw;
+  padding-block: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15vw;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  .header {
+    font-size: 20px;
+    padding: 5vw;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main {
+    gap: 200px;
+  }
+}
