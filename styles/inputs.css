@@ -51,7 +51,13 @@
   transform: translateX(29px);
 }
 
-input[type="text"] {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
   font-family: "GT Eesti Pro Display", Helvetica, sans-serif;
   font-size: 25px;
   inline-size: 86px;
